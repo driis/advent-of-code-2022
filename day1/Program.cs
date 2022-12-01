@@ -15,6 +15,13 @@
         }
     }
 }
-var lines = await File.ReadAllLinesAsync("input.txt");
-int largest = Elves(lines).Max();
-Console.WriteLine(largest);
+
+// Part 1
+var lines = (await File.ReadAllLinesAsync("input.txt")).ToArray();
+var elves = Elves(lines).ToArray();
+int largest = elves.Max();
+Console.WriteLine($"Part 1 - Elf with largest calorie count: {largest}");
+
+// Part 2
+var threeLargest = elves.OrderByDescending(x => x).Take(3).Sum();
+Console.WriteLine($"Part 2 - Three elves carrying a calorie total of {threeLargest}");
