@@ -19,16 +19,6 @@ Stack<char>[] ParseStacks(string[] input)
     return stacks;
 }
 
-void Move<T>(int count, Stack<T> from, Stack<T> to)
-{
-    for (int i = 0; i < count ; i++)
-    {
-        var item = from.Pop();
-        to.Push(item);
-    }
-}
-
-
 void MoveInBlocks<T>(int count, Stack<T> from, Stack<T> to)
 {
     var temp = new T[count];
