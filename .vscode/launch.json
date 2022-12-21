@@ -45,7 +45,7 @@
             "request": "launch",
             "preLaunchTask": "build17",
             "program": "${workspaceFolder}/day17/bin/Debug/net7.0/day17.dll",
-            "args": ["test.txt", "3"],
+            "args": [],
             "cwd": "${workspaceFolder}/day17",
             "console": "internalConsole",
             "stopAtEntry": false
